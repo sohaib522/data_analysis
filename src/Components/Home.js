@@ -12,6 +12,7 @@ import Barcharts from './Barcharts';
 import { createContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import "../index.css"
+import Draw_Map from './Draw_Map';
 export default function Home() {
   /*local data is state incase data is updated or changed localdata will change
   also */
@@ -66,13 +67,14 @@ const pie_data=name.map((c,i)=>{return { reasons : name[i].reasons,value : perce
 
     <div className='container' >
 
-    <div id='pie' ><Site_count site_count={localdata.length} sites={sites} nars={nar} /></div>
-  <div ><Draw_Pie piie_data={pie_data} /></div>  
+    {/*<div id='pie' ><Site_count site_count={localdata.length} sites={sites} nars={nar} /></div>*/}
+  {/*<div ><Draw_Pie piie_data={pie_data} /></div>*/}  
     </div>
     <br/>
-    <div ><Download sites={sites} nars={nar} /></div>
+    {/*<div ><Download sites={sites} nars={nar} /></div>*/}
  
-    <Formulate_Table json_list={localdata} site_count={localdata.length}/>
+    {/*<Formulate_Table json_list={localdata} site_count={localdata.length}/>*/}
+    <div width="20%" align="right"><Draw_Map/></div>
     </div>
   
   )
