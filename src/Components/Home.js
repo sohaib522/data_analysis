@@ -65,16 +65,17 @@ const pie_data=name.map((c,i)=>{return { reasons : name[i].reasons,value : perce
 
     <div > 
 
-    <div className='container' >
-
-    {/*<div id='pie' ><Site_count site_count={localdata.length} sites={sites} nars={nar} /></div>*/}
-  {/*<div ><Draw_Pie piie_data={pie_data} /></div>*/}  
-    </div>
+    <div className="container" >
     <br/>
-    {/*<div ><Download sites={sites} nars={nar} /></div>*/}
+    <div id='sites'><Site_count site_count={localdata.length} sites={sites} nars={nar} /></div>
+  <Draw_Pie piie_data={pie_data} />
+  <Draw_Map/>
+    </div>
+   
+    <br/>
+    <div className='download' ><Download sites={sites} nars={nar} /></div>
  
-    {/*<Formulate_Table json_list={localdata} site_count={localdata.length}/>*/}
-    <div width="20%" align="right"><Draw_Map/></div>
+    <Formulate_Table json_list={localdata} site_count={localdata.length}/>
     </div>
   
   )

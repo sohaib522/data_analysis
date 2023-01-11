@@ -21,7 +21,7 @@ const bull = (
 
 export default function Site_count(props) {
   return (
-    <Card  sx={{ minWidth: 230 }} style={{ backgroundColor :'#ffcccc',top : 40}}>
+    <Card  sx={{ minWidth: 200,height :150,top: 1000}} style={{ backgroundColor :'#ffcccc',top : 40}}>
       <CardContent>
         <Typography variant="h6" component="div">Site Counts
         </Typography>
