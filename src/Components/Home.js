@@ -11,6 +11,7 @@ import { useContext } from 'react';
 import Barcharts from './Barcharts';
 import { createContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import Draw_Map from './Draw_Map';
 import "../index.css"
 export default function Home() {
   /*local data is state incase data is updated or changed localdata will change
