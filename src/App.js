@@ -3,16 +3,17 @@ import './App.css';
 import Home from "./Components/Home";
 import Barcharts from './Components/Barcharts';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-        <BrowserRouter>
+        <HashRouter>
    <Routes>
     <Route path='/' element={<Home/>} />
     <Route path='/barcharts' element={<Barcharts/>} />
    </Routes>
-   </BrowserRouter>
+   </HashRouter>
     </div>
   );
 }
