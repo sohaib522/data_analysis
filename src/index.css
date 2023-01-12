@@ -30,12 +30,31 @@ margin: 50px;
   top: 60px;
 }
 .container
-{ width: 800;
+{ width: 1000;
   display: flex;
   flex-direction: row;
   margin: 50;
+  border: 2x solid rgb(218, 5, 5);
+  
 }
 #p{
   position: relative;
   right: 71;
 }
+.map-container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  top: 0px;
+  right: 70;
+  }
+  #sites
+  {
+    position: relative;
+    top: 70px;
+    right: 10px;
+  }
+  .download
+  {
+    left: 500px;
+  }
