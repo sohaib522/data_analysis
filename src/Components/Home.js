@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Draw_Pie from './Draw_Pie';
 import Site_count from './Site_count';
 import Download from './Download';
-import { Card, StepContext } from '@mui/material';
+import { Card, Grid, StepContext } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useContext } from 'react';
 import Barcharts from './Barcharts';
@@ -17,6 +17,7 @@ export default function Home() {
   /*local data is state incase data is updated or changed localdata will change
   also */
     const [localdata,setlocaldata]=useState(json_data)
+  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
    /*all reasons are stored in pie_char_data there occurence will be calculated
    through out the pie_char_data array that is neccessary to draw
@@ -65,18 +66,33 @@ const pie_data=name.map((c,i)=>{return { reasons : name[i].reasons,value : perce
   return (
 
     <div > 
-
-    <div className="container" >
-    <br/>
-    <div id='sites'><Site_count site_count={localdata.length} sites={sites} nars={nar} /></div>
-  <Draw_Pie piie_data={pie_data} />
-  <Draw_Map/>
-    </div>
-   
-    <br/>
-    <div className='download' ><Download sites={sites} nars={nar} /></div>
  
+    <Grid container className="container" spacing={0.5} >
+  <Grid item xs={5} md={1} xl={1} sm={12} id="sites">
+  <Site_count site_count={localdata.length} sites={sites} nars={nar} />
+  </Grid>
+  <Grid item xs={7} md={7} xl={5} sm={12}>
+  <Draw_Pie piie_data={pie_data} />
+    </Grid>
+    <Grid item xs={12} md={4} xl={6} sm={12}>
+    <Draw_Map/>
+    </Grid>
+   
+    <Grid item xs={12} md={12} xl={12} sm={12} sx={{position : 'relative',top : 0,right : 30}}>
+    
+    <Download sites={sites} nars={nar} />
+    </Grid>
+    <Grid item xs={90} md={12} xl={12} sm={30}>
     <Formulate_Table json_list={localdata} site_count={localdata.length}/>
+      </Grid>
+ 
+ 
+   
+  
+    
+   
+
+    </Grid>
     </div>
   
   )

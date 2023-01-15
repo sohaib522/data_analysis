@@ -30,7 +30,7 @@ margin: 50px;
   top: 60px;
 }
 .container
-{ width: 1000;
+{ 
   display: flex;
   flex-direction: row;
   margin: 50;
@@ -51,7 +51,7 @@ margin: 50px;
   #sites
   {
     position: relative;
-    top: 70px;
+    top: 14px;
     right: 10px;
   }
   .download
