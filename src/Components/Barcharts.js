@@ -11,13 +11,14 @@ export default function Barcharts(props) {
  
   return (
   
-    <Grid container spacing={1}>
-      <Grid item xs = {12} sm={12} md={3} xl={3}>
-      <Stacked_bar/>
-      </Grid>
-      <Grid item xs = {12}  sm={12} md={9} xl={9}>
+    <Grid container spacing={3}>
+        <Grid item xs = {16}  sm={12} md={9} xl={9}>
     <Draw_bar sites={sites} nars={nar} />
       </Grid>
+      <Grid item xs = {2} sm={12} md={3} xl={3}>
+      <Stacked_bar/>
+      </Grid>
+    
     
       {/*i tried to display the bar garh but God what reasons the browser freez*/}
       </Grid> 

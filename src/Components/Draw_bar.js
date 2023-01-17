@@ -43,7 +43,7 @@ console.log(sum )
       
       };
   return (
-    <div  style={{width : '40%'}}>
+    <div  style={{width : '60%'}}>
         <h3>Average Nar ( {avg} ) </h3>
         <ReactApexChart options={state.options} series={state.series} type="bar" height={350} />
 

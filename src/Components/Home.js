@@ -68,11 +68,11 @@ const pie_data=name.map((c,i)=>{return { reasons : name[i].reasons,value : perce
     <div > 
  
     <Grid container className="container" spacing={6} >
-  <Grid item xn={8} sm={5} xl={2} md={1}><h1></h1></Grid>
+  <Grid item xs={0} sm={5} xl={2} md={1}><h1></h1></Grid>
   <Grid item xs={4} md={1} xl={1} sm={4} id="sites">
   <Site_count site_count={localdata.length} sites={sites} nars={nar} />
   </Grid>
-  <Grid item xs={12} md={5} xl={4} sm={12}>
+  <Grid item xs={6} md={5} xl={4} sm={12}>
   <Draw_Pie piie_data={pie_data} />
     </Grid>
     <Grid item xs={12} md={5} xl={3} sm={12}>
